@@ -19,7 +19,7 @@ public class Barrier {
                 partiesLeft.notifyAll();
             } else {
                 while (partiesLeft.get() > 0) {
-                    //partiesLeft.wait();
+                    partiesLeft.wait();
                 }
             }
         }
